@@ -21,21 +21,84 @@ export default class ShoppingCart extends Component {
     })
   };
 
-  handleAddProductCart = (product) => {
-    const productCart = {
-      maSP: product.maSP,
-      tenSP: product.tenSP,
-      hinhAnh:product.hinhAnh,
-      soLuong:1,
-      donGia:product.giaBan,
-    }
+  _findIndex = (maSP) => {
+    return this.state.listCart.findIndex((item) => {
+      return item.maSP === maSP;
+    });
+  }
 
-    //copy this.state.listCart => mảng mới listCart
-    let listCart = [...this.state.listCart, productCart];
+  handleAddProductCart = (product) => {
+    let listCart = [...this.state.listCart];
+    const index = this._findIndex(product.maSP);
+
+    if(index !== -1){
+      //Tìm thấy SP => update số lượng
+      listCart[index].soLuong += 1;
+    }
+    else{
+      // thêm sản phẩm vào giỏ hàng
+      const productCart = {
+        maSP: product.maSP,
+        tenSP: product.tenSP,
+        hinhAnh:product.hinhAnh,
+        soLuong:1,
+        donGia:product.giaBan,
+      }
+  
+      //copy this.state.listCart => mảng mới listCart
+      listCart = [...this.state.listCart, productCart];
+    }
 
     this.setState({
       listCart,
     })
+  }
+
+  handleDelete = (product) => {
+    let listCart = [...this.state.listCart];
+    const index = this._findIndex(product.maSP)
+
+    if(index !== -1){
+      //tìm thấy => xoá
+      listCart.splice(index, 1);
+      this.setState({
+        listCart,
+      })
+    }
+  }
+
+  handleUpdateSL = (product, status) => {
+    let listCart = [...this.state.listCart];
+    const index = this._findIndex(product.maSP);
+    if(index !== -1){
+      if(status){
+        //tăng SL
+        listCart[index].soLuong += 1;
+      }
+      else{
+        //giảm SL
+        if(listCart[index].soLuong > 1){
+          listCart[index].soLuong -= 1;
+        }
+      }
+
+      //Update lại state
+      this.setState({
+        listCart,
+      })
+    }
+  }
+
+  total = () => {
+    // let sum = 0 ;
+    // this.state.listCart.forEach((item) => {
+    //   sum += item.soLuong;
+    // })
+    // return sum;
+
+    return this.state.listCart.reduce((sum, item) => {
+      return sum += item.soLuong;
+    }, 0) //tham số 0 gán mặc định cho sum
   }
   
   render() {
@@ -49,11 +112,11 @@ export default class ShoppingCart extends Component {
             data-toggle="modal"
             data-target="#modelId"
           >
-            Giỏ hàng (0)
+            Giỏ hàng ({this.total()})
           </button>
         </div>
         <DanhSachSanPham listProduct={listProduct} getDetailProduct={this.handleGetProduct} getProductAddCart={this.handleAddProductCart}/>
-        <Modal listCart={listCart}/>
+        <Modal listCart={listCart} getProductDelete={this.handleDelete} getProductUpdateSL={this.handleUpdateSL}/>
         <div className="container">
           <div className="row">
             <div className="col-sm-5">

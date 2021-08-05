@@ -13,12 +13,31 @@ export default class Modal extends Component {
             <img src={item.hinhAnh} width={50} alt="" />
           </td>
           <td>
-            <button>-</button>{item.soLuong}<button>+</button>
+            <button
+              onClick={() => {
+                this.props.getProductUpdateSL(item, false)
+              }}
+            >
+              -
+            </button>
+             {item.soLuong}
+            <button
+              onClick={() => {
+                this.props.getProductUpdateSL(item, true)
+              }}
+            >
+              +
+            </button>
           </td>
           <td>{item.donGia}</td>
           <td>{item.soLuong*item.donGia}</td>
           <td>
-            <button className="btn btn-danger">Delete</button>
+            <button 
+              className="btn btn-danger" 
+              onClick={() => {this.props.getProductDelete(item)}}
+            >
+              Delete
+            </button>
           </td>
         </tr>
       )
