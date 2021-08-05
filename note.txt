@@ -1,0 +1,32 @@
+npm install: tạo lại thư mục node_modules
+nmp start: khởi chạy project
+
+
+- Header component: chứa những đoạn html dành cho Header
+- Carousel component: chứa những đoạn html dành cho Carousel
+- Filter component: chứa những đoạn html dành cho Filter
+
+JSX: tổng hợp gồm html vs js
+
+===== Buổi 1 =====
+* Component:
+    - Stateful Component => class
+    - Stateless Component => function
+
+===== Buổi 2 =====
+* Rendering Elements: {}
+* Handling Events: onclick
+* State: nếu như state thay đổi => component sẽ thay đổi
+* List keys: duyệt mảng
+
+===== Buổi 3 =====
+* communication
+    - Props: truyền dữ liệu từ component cha sang component con
+        + class: Nhận props thông qua con trỏ this => this.props
+        + function: Nhận props thông qua tham số của function(props)
+                    Không còn tồn tại từ khoá this
+        + children: Nhận tất cả từ Component cha. (props.children)
+    - Lifting State Up: truyền dữ liệu từ component con sang component cha
+            Component cha truyền vào Component con 1 props 
+            => props mang hàng (hàm này giúp component cha nhận được data từ component con)
+* Shopping Cart
