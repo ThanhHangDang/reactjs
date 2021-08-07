@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "fullname": "Dang Thanh Hang",
+        "username": "thanghangdang",
+        "email": "thanghangdang16@gmail.com",
+        "phoneNumber": "12345",
+        "type": "da"
+    },
+    {
+        "id": 2,
+        "fullname": "Quynh nhu",
+        "username": "thanghangdang",
+        "email": "thanghangdang16@gmail.com",
+        "phoneNumber": "12345",
+        "type": "vit"
+    }
+]
