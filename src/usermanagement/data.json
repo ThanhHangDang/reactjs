@@ -5,7 +5,7 @@
         "username": "thanghangdang",
         "email": "thanghangdang16@gmail.com",
         "phoneNumber": "12345",
-        "type": "da"
+        "type": "VIP"
     },
     {
         "id": 2,
@@ -13,6 +13,6 @@
         "username": "thanghangdang",
         "email": "thanghangdang16@gmail.com",
         "phoneNumber": "12345",
-        "type": "vit"
+        "type": "VIP"
     }
 ]

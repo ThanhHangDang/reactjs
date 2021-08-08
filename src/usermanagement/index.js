@@ -40,6 +40,15 @@ class Home extends Component {
     })
   }
 
+  //add và update
+  handleSubmit = (user) => {
+    const userClone = {...user, id: new Date().getTime()}
+    let userList = [...this.state.userList, userClone];
+    this.setState({
+      userList,
+    })
+  }
+
   render() {
     //Filter userList trước khi truyền vào Component
     let {userList, keyword} = this.state;
@@ -63,7 +72,7 @@ class Home extends Component {
           </button>
         </div>
         <Users userList={userList} getUserDelete={this.handleDeleteUser}/>
-        <Modal />
+        <Modal onSubmit={this.handleSubmit}/>
       </div>
     );
   }
