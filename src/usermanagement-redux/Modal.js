@@ -1,4 +1,5 @@
 import React, { Component, createRef } from "react";
+import {connect} from "react-redux";
 
 class Modal extends Component {
 
@@ -143,4 +144,22 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const mapStateToProps = (state) => {
+  return {
+    userEdit: state.userReducer.userEdit,
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSubmit: (user) => {
+      const action = {
+        type: "SUBMIT",
+        payload: user,
+      }
+      dispatch(action);
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Modal);

@@ -9,7 +9,8 @@ import './App.css';
 // import ListKeys from './list-keys';
 // import Communication from './communication';
 // import ShoppingCart from "./shopping-cart";
-import Home from './usermanagement';
+// import Home from './usermanagement';
+import HomeRedux from "./usermanagement-redux"
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <ListKeys /> */}
       {/* <Communication /> */}
       {/* <ShoppingCart /> */}
-      <Home />
+      {/* <Home /> */}
+      <HomeRedux />
     </div>
   );
 }

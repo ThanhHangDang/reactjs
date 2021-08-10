@@ -30,4 +30,15 @@ JSX: tổng hợp gồm html vs js
             Component cha truyền vào Component con 1 props 
             => props mang hàng (hàm này giúp component cha nhận được data từ component con)
 * Shopping Cart
+
+===== Buổi 4 =====
+* Shopping Cart
 * Usermanagement
+
+===== Buổi 5 =====
+* Form
+* Lifecycle: componentWillReceiveProps
+
+===== Buổi 5 =====
+* Redux
+    Cài đặt redux và react-redux: npm install redux react-redux --save

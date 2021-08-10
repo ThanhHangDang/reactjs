@@ -11,6 +11,7 @@ class Home extends Component {
     this.state = {
       userList : data,
       keyword : "",
+      userEdit: null,
     }
   }
 
@@ -42,16 +43,34 @@ class Home extends Component {
 
   //add và update
   handleSubmit = (user) => {
-    const userClone = {...user, id: new Date().getTime()}
-    let userList = [...this.state.userList, userClone];
+    let userList = [...this.state.userList];
+    if(user.id){
+      //update
+      const index = this._findIndex(user.id)
+      if(index !== -1){
+        userList[index] = user;
+      }
+    }
+    else{
+      //add
+      const userClone = {...user, id: new Date().getTime()}
+      userList = [...this.state.userList, userClone];
+    }
+    
     this.setState({
       userList,
     })
   }
 
+  handleGetUserEdit = (user) => {
+    this.setState({
+      userEdit : user,
+    })
+  }
+
   render() {
     //Filter userList trước khi truyền vào Component
-    let {userList, keyword} = this.state;
+    let {userList, keyword, userEdit} = this.state;
     userList = this.state.userList.filter((user) => {
       return (
         user.fullname.toLowerCase().indexOf(keyword.toLowerCase()) !== -1
@@ -67,12 +86,17 @@ class Home extends Component {
             className="btn btn-success"
             data-toggle="modal"
             data-target="#modelIdUser"
+            onClick={() => {
+              this.setState({
+                userEdit:null,
+              })
+            }}
           >
             Add User
           </button>
         </div>
-        <Users userList={userList} getUserDelete={this.handleDeleteUser}/>
-        <Modal onSubmit={this.handleSubmit}/>
+        <Users userList={userList} getUserDelete={this.handleDeleteUser} getUserEdit={this.handleGetUserEdit}/>
+        <Modal onSubmit={this.handleSubmit} userEdit={userEdit}/>
       </div>
     );
   }
