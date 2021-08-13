@@ -10,7 +10,8 @@ import './App.css';
 // import Communication from './communication';
 // import ShoppingCart from "./shopping-cart";
 // import Home from './usermanagement';
-import HomeRedux from "./usermanagement-redux"
+// import HomeRedux from "./usermanagement-redux";
+import ShoppingCartRedux from './shopping-cart-redux';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       {/* <Communication /> */}
       {/* <ShoppingCart /> */}
       {/* <Home /> */}
-      <HomeRedux />
+      {/* <HomeRedux /> */}
+      <ShoppingCartRedux />
     </div>
   );
 }
