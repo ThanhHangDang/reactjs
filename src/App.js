@@ -11,7 +11,9 @@ import './App.css';
 // import ShoppingCart from "./shopping-cart";
 // import Home from './usermanagement';
 // import HomeRedux from "./usermanagement-redux";
-import ShoppingCartRedux from './shopping-cart-redux';
+// import ShoppingCartRedux from './shopping-cart-redux';
+// import GameTaiXiu from './gameTaiXiu';
+import FormValidation from './form-validation';
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
       {/* <ShoppingCart /> */}
       {/* <Home /> */}
       {/* <HomeRedux /> */}
-      <ShoppingCartRedux />
+      {/* <ShoppingCartRedux /> */}
+      {/* <GameTaiXiu /> */}
+      <FormValidation />
     </div>
   );
 }

@@ -39,6 +39,12 @@ JSX: tổng hợp gồm html vs js
 * Form
 * Lifecycle: componentWillReceiveProps
 
-===== Buổi 5 =====
+===== Buổi 6 =====
 * Redux
     Cài đặt redux và react-redux: npm install redux react-redux --save
+
+===== Buổi 7 =====
+* Redux
+    - Action creator
+* Form Validation
+* Lifecycle

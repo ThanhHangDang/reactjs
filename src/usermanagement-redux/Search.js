@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {connect} from "react-redux";
+import {actSearch} from "./../redux/actions"
 
 class Search extends Component {
 
@@ -18,11 +19,7 @@ class Search extends Component {
 const mapDispatctToProps = (dispatch) => {
   return{
     getKeyWord: (keyword) => {
-      const action = {
-        type: "GET_KEYWORD",
-        payload: keyword,
-      }
-      dispatch(action)
+      dispatch(actSearch(keyword))
     }
   }
 }

@@ -3,6 +3,7 @@ import Search from "./Search";
 import Users from "./Users";
 import Modal from "./Modal";
 import {connect} from "react-redux";
+import {actEdit} from "./../redux/actions";
 
 class Home extends Component {
   render() {
@@ -32,11 +33,7 @@ class Home extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     addUser: () => {
-      const action = {
-        type: "EDIT",
-        payload: null,
-      }
-      dispatch(action);
+      dispatch(actEdit(null));
     }
   }
 }
