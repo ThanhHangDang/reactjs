@@ -47,4 +47,6 @@ JSX: tổng hợp gồm html vs js
 * Redux
     - Action creator
 * Form Validation
+
+===== Buổi 8 =====
 * Lifecycle
