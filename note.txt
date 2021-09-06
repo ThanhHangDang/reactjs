@@ -49,4 +49,41 @@ JSX: tổng hợp gồm html vs js
 * Form Validation
 
 ===== Buổi 8 =====
-* Lifecycle
+* Lifecycle: stateful component
+*Routing (basic)
+    - Homepage
+    - About
+    - ListMovie
+    npm install react-router-dom --save
+http://github.com/dpnguyen53/bc10reactrouting
+
+===== Buổi 9 =====
+*Routing (refactor)
+* HTTP & Axios
+    npm install axios --save <=> fetch
+    - Lấy danh sách phim.
+* Loading
+
+===== Buổi 10 =====
+* Redux thunk <=> redux saga: function generator (function *, yield)
+* Get Params From URL: route, component sử dụng match
+* Detail Movie
+
+===== Buổi 11 =====
+* Routing (Home Template & Admin Template)
+* HOC (Higher order component)
+=> là 1 function => function này nó sẽ return về 1 function khác
+* Render Props (adv): Tái sử dụng
+* Routing (Adv)
+
+===== Buổi 12 =====
+* Hooks
+
+===== Buổi 13 =====
+* Auth
+* Guard Routing Admin
+
+===== Buổi 14 =====
+* Add User(Token)
+* Material UI
+* Styledd Component

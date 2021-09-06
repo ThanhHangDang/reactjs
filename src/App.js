@@ -13,7 +13,9 @@ import './App.css';
 // import HomeRedux from "./usermanagement-redux";
 // import ShoppingCartRedux from './shopping-cart-redux';
 // import GameTaiXiu from './gameTaiXiu';
-import FormValidation from './form-validation';
+// import FormValidation from './form-validation';
+// import Lifecycle from './lifecycle';
+import ToDoList from './baitapToDoList';
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
       {/* <HomeRedux /> */}
       {/* <ShoppingCartRedux /> */}
       {/* <GameTaiXiu /> */}
-      <FormValidation />
+      {/* <FormValidation /> */}
+      {/* <Lifecycle /> */}
+      <ToDoList />
     </div>
   );
 }
