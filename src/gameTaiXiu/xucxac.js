@@ -9,7 +9,7 @@ class XucXac extends Component {
                 <img 
                     key={index} 
                     className="ml-2 mb-2" 
-                    style={{width:50, height:50}} 
+                    style={{width:30, height:30}} 
                     src={xucXac.hinhAnh}
                     alt={xucXac.ma}
                 ></img>

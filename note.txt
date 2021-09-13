@@ -115,6 +115,6 @@ http://github.com/dpnguyen53/bc10reactrouting
      + thêm "PUBLIC_URL="/build" react-scripts build" vào "build" trong package.json
     
 * Java (SELL web vs google)
-    copy bỏ thư mục "build' vào project java
+    copy bỏ thư mục "build" vào project java
 
 * Nextjs
