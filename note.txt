@@ -87,3 +87,34 @@ http://github.com/dpnguyen53/bc10reactrouting
 * Add User(Token)
 * Material UI
 * Styledd Component
+
+===== Buổi 15 =====
+* Refactor code call api
+    - Flow login Auth
+        + dispatch actAuthSuccess
+        + setHeader token
+        + timeout exp
+
+* Flow reload web (actTryLogin)
+    + timeout exp
+    + dispatch actAuthSuccess
+    + setHeader token
+
+* Logout
+    - remove accessToken
+    - redirect /auth
+    - clear reducer Auth
+
+===== Buổi 16 =====
+* alias
+* Lazy Load page
+* Deploy app heroku
+* Build (bằng tay)
+    - Hosting (Sever) (mua hoặc free)
+    - Domain (mua hoặc free)
+     + thêm "PUBLIC_URL="/build" react-scripts build" vào "build" trong package.json
+    
+* Java (SELL web vs google)
+    copy bỏ thư mục "build' vào project java
+
+* Nextjs

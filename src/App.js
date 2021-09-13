@@ -12,10 +12,10 @@ import './App.css';
 // import Home from './usermanagement';
 // import HomeRedux from "./usermanagement-redux";
 // import ShoppingCartRedux from './shopping-cart-redux';
-// import GameTaiXiu from './gameTaiXiu';
+import GameTaiXiu from './gameTaiXiu';
 // import FormValidation from './form-validation';
 // import Lifecycle from './lifecycle';
-import ToDoList from './baitapToDoList';
+// import ToDoList from './baitapToDoList';
 
 function App() {
   return (
@@ -34,10 +34,10 @@ function App() {
       {/* <Home /> */}
       {/* <HomeRedux /> */}
       {/* <ShoppingCartRedux /> */}
-      {/* <GameTaiXiu /> */}
+      <GameTaiXiu />
       {/* <FormValidation /> */}
       {/* <Lifecycle /> */}
-      <ToDoList />
+      {/* <ToDoList /> */}
     </div>
   );
 }
